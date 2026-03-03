@@ -49,7 +49,7 @@ app.use("/api/diamonds",     diamondShapeRoutes);
 app.use("/api/gold-entries", goldEntryRoutes);
 
 // Health
-app.get("/api/health", (_req, res) => res.json({ success: true, message: "AtelierGold API ✦" }));
+app.get("/", (_req, res) => res.json({ success: true, message: "AtelierGold API ✦" }));
 
 // 404
 app.use((_req, res) => res.status(404).json({ success: false, error: "Route not found" }));
